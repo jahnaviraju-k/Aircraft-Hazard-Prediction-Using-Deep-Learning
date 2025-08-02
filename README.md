@@ -1,33 +1,33 @@
 # Malware Detection for Health Sensor Data
 # Overview 
 This project focuses on using machine learning to detect potential malware threats embedded in health sensor code an important step for securing IoT and medical devices. The system uses labeled datasets and ensemble learning models to flag suspicious patterns in code behavior.
+# Problem
+Malware embedded in health sensor firmware or code can compromise patient data and device functionality. I wanted to build a model that detects such patterns based on behavioral features from sensor code samples.
 
-# Objectives 
-- Identify malicious activity in health sensor data through static and behavioral code analysis
+# How I Did It
+1. Data Understanding & Preprocessing:
+- Collected labeled datasets with code snippets and metadata showing malware vs benign behavior.
 
-- Build interpretable and high-performing models using real-world labeled datasets
+- Performed data cleaning: removed nulls, normalized values, and encoded categorical features.
 
-# ML Techniques Used
-- Models: XGBoost, LightGBM, Random Forest
+2. Feature Engineering:
+- Extracted static features (e.g., opcode frequency, function calls, code size) and behavioral signals (e.g., communication patterns).
 
-- Feature Engineering: Extracted statistical and structural code-level features
+- Applied feature selection techniques to remove noisy features and reduce dimensionality.
 
-- Evaluation: Achieved high accuracy and precision after hyperparameter tuning and cross-validation
+3. Model Training:
+- Trained multiple models: Random Forest, XGBoost, and LightGBM.
 
-# Key Features
-- Handles large-scale feature sets with strong model generalization
+- Used cross-validation and grid search for hyperparameter tuning.
 
-- Performs well under imbalanced data using advanced boosting methods
+- Balanced the dataset using SMOTE to improve class representation.
 
-- Includes clear preprocessing, training, and evaluation scripts
+4. Model Evaluation
+- Measured performance using accuracy, F1-score, and confusion matrix.
 
+- XGBoost achieved the best trade-off between recall and precision, detecting malware with high reliability.
 
 # Results
-- Best Model: XGBoost
+- Achieved ~95% accuracy on test data.
 
-- Accuracy: ~95%
-
-- F1-Score: High (depending on class distribution)
-
-# Tools & Libraries
-Python, XGBoost, LightGBM, scikit-learn, pandas, matplotlib
+- Final model generalized well on unseen samples, showing potential for real-world deployment in embedded device security.
