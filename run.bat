@@ -1,2 +1,0 @@
-python CivilAircraftHazard.py
-pause
