@@ -1,4 +1,4 @@
-# Civil Aircraft Hazard Prediction Using LSTM
+# Civil Aircraft Hazard Prediction Using (LSTM) Deep Learning
 # Overview
 This project uses time-series deep learning (LSTM) to predict hazardous events in civil aircraft, based on APU (Auxiliary Power Unit) sensor data. The aim is to detect patterns that precede faults or anomalies in engine operation, helping improve aviation safety.
 
